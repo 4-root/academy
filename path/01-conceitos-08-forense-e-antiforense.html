@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>08 - Forense e Antiforense - #_4root Academy</title>
+<meta name="description" content="Video Explicativo">
+<meta name="theme-color" content="#050505">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="#_4root Academy">
+<meta property="og:title" content="08 - Forense e Antiforense - #_4root Academy">
+<meta property="og:description" content="Video Explicativo">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261023184833">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "#_4root Academy", "inLanguage": "pt-BR", "description": "Plataforma de estudos da comunidade #_4root Academy - ciberseguranca, hacking etico e infraestrutura."}</script>
+
+</head>
+<body data-base="" data-page="course" data-course="01 - Conceitos/08 - Forense e Antiforense" data-landing="/path/01-conceitos-08-forense-e-antiforense.html" class="grain-overlay">
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="cyber-cursor"><div class="cursor-glitch-effect"></div></div>
+
+<header class="navbar" id="navbar">
+  <nav class="nav-inner">
+    <a href="/index.html" class="nav-logo" aria-label="#_4root Academy"><span class="font-qb text-hash">#</span><span class="font-qb text-underscore">_</span><span class="neon-text font-sora text-4">4</span><span class="font-qb text-root">root</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="https://4root.com.br/#home" class="nav-link">Home<span class="underline"></span></a></li>
+      <li><a href="https://4root.com.br/#comunidade" class="nav-link">Comunidade<span class="underline"></span></a></li>
+      <li><a href="https://4root.com.br/#eventos" class="nav-link">Eventos<span class="underline"></span></a></li>
+      <li><a href="https://4root.com.br/#youtube" class="nav-link">YouTube<span class="underline"></span></a></li>
+      <li><a href="https://4root.com.br/#recursos" class="nav-link">Networks<span class="underline"></span></a></li>
+      <li><a href="https://4root.com.br/#desafios" class="nav-link">Desafios<span class="underline"></span></a></li>
+      <li class="nav-drop has-active">
+        <button type="button" class="nav-link nav-drop-btn" aria-haspopup="true" aria-expanded="false">Produtos<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><span class="underline"></span></button>
+        <div class="nav-drop-menu" role="menu"><a href="https://academy.4root.com.br" role="menuitem" class="active" data-text="Academy">Academy</a><a href="https://news.4root.com.br" role="menuitem" data-text="News">News</a><a href="https://cti.4root.com.br" role="menuitem" data-text="CTI | CVE">CTI | CVE</a></div>
+      </li>
+      <li><a href="https://4root.com.br/#contato" class="nav-link">Contato<span class="underline"></span></a></li>
+    </ul>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
+  </nav>
+</header>
+<div class="mobile-menu-overlay" id="mobile-menu">
+  <a href="https://4root.com.br/#home">Home</a>
+  <a href="https://4root.com.br/#comunidade">Comunidade</a>
+  <a href="https://4root.com.br/#eventos">Eventos</a>
+  <a href="https://4root.com.br/#youtube">YouTube</a>
+  <a href="https://4root.com.br/#recursos">Networks</a>
+  <a href="https://4root.com.br/#desafios">Desafios</a>
+  <span class="mobile-menu-label">// produtos</span>
+    <a href="/index.html" class="active">Academy</a>
+  <a href="https://news.4root.com.br">News</a>
+  <a href="https://cti.4root.com.br">CTI | CVE</a>
+  <a href="https://4root.com.br/#contato">Contato</a>
+  <div class="mobile-menu-socials" aria-label="Redes da comunidade">
+      <a href="https://discord.gg/Aw4F6qXS4N" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3.54 5.61c-3.22.96-6.22.88-8.92 0-.5-.15-.83.42-.56.86a7.54 7.54 0 0 0 5.02 2.75 7.54 7.54 0 0 0 5.02-2.75c.27-.44-.06-1.01-.56-.86Z"></path>
+          <path d="M18.5 3h-13A2.5 2.5 0 0 0 3 5.5v13A2.5 2.5 0 0 0 5.5 21h13a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 18.5 3Z"></path>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@4rootcommunity" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+          <path d="m10 15 5-3-5-3z"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/company/4root" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/4root_community" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+        </svg>
+      </a>
+    </div>
+</div>
+
+<main>
+  <section class="course-hero scanlines">
+    <div class="ch-cover" style="background-image:url('/assets/trilhas/forense.jpg')"></div>
+    <div class="hero-gradient"></div>
+    <div class="course-hero-inner">
+      <nav class="crumbs" aria-label="Trilha">
+        <a href="/index.html#trilhas"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> Trilhas</a>
+        <span class="sep">/</span><a href="/index.html#trilhas">01 - Conceitos</a>
+        <span class="sep">/</span><span class="here">08 - Forense e Antiforense</span>
+      </nav>
+      <h1 class="text-glitch" data-text="08 - Forense e Antiforense">08 - Forense e Antiforense</h1>
+      <p class="ch-desc">Video Explicativo</p>
+      
+      <div class="ch-meta">
+        <span class="ch-chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 61 anotações</span>
+        <span class="ch-chip level-none"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4c4-2 7 2 11 0v9c-4 2-7-2-11 0"/></svg> Trilha</span>
+        <span class="ch-chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5zM20 19v2H6"/></svg> Obsidian → web</span>
+      </div>
+      <div class="ch-actions">
+        <a class="cta-primary glitch" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Criptografia.html" data-text="iniciar trilha">iniciar trilha</a>
+        <button class="cta-secondary js-open-search" type="button">buscar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="sobre"><div class="about-course"><div class="section-label"><span class="label-bar"></span><span>// sobre esta trilha</span></div><div class="markdown-content"><p><strong>Video Explicativo</strong></p>
+<video controls preload="metadata" class="obsidian-media"><source src="/assets/media/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/ForenseLinux.mp4"></video>
+
+<p><strong>Podcast</strong><br />
+<audio controls preload="metadata" class="obsidian-media"><source src="/assets/media/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/Forense.m4a"></audio></p>
+<p>A <strong>Computação Forense</strong> é definida nas fontes como um ramo da Criminalística que utiliza métodos científicos para a <strong>aquisição, preservação, recuperação e apresentação</strong> de dados processados eletronicamente e armazenados em mídias computacionais. Seu objetivo primordial é coletar e analisar evidências digitais de forma que sejam <strong>admissíveis em juízo</strong>, permitindo a perseguição da autoria e da materialidade de crimes cibernéticos. Esta disciplina é considerada uma extensão formal da investigação digital, devendo ser conduzida com todo o <strong>rigor da lei</strong> para que os resultados possam ser apresentados em tribunais.</p>
+<p>A prática forense baseia-se em princípios e procedimentos estruturados, tais como:</p>
+<ul>
+<li><strong>Princípio de Troca de Locard:</strong> Adaptado ao mundo digital, dita que um infrator sempre deixará vestígios (lógicos ou físicos) ao interagir com sistemas computacionais.</li>
+<li><strong>Cadeia de Custódia:</strong> É o procedimento indispensável para garantir a <strong>integridade, autenticidade e rastreabilidade</strong> da prova, registrando cronologicamente todos os passos e pessoas que manipularam a evidência.</li>
+<li><strong>Fases da Investigação:</strong> O processo geralmente compreende as etapas de identificação, isolamento, coleta, preservação, exame, análise e apresentação dos resultados.</li>
+<li><strong>Tipos de Análise:</strong> A perícia pode ser <strong>Live</strong> (com o sistema em execução, focando em dados voláteis como a memória RAM) ou <strong>Post-mortem</strong> (com o equipamento desligado, utilizando cópias "bit a bit" para preservar o estado original do disco).</li>
+</ul>
+<p>Por outro lado, a <strong>Antiforense</strong> é descrita como o conjunto de ferramentas, métodos e procedimentos aplicados com o objetivo claro de <strong>impedir, dificultar ou subverter a investigação forense</strong>. Conceitualmente, ela atua como uma contramedida para comprometer a <strong>disponibilidade ou a utilidade</strong> das evidências para o perito. As fontes ressaltam que o crime e a defesa andam de mãos dadas: à medida que novas técnicas de perícia surgem, novos métodos criminais são desenvolvidos para se opor a elas.</p>
+<p>As principais técnicas antiforense mencionadas incluem:</p>
+<ul>
+<li><strong>Ocultação de Dados:</strong> Inclui a <strong>esteganografia</strong> (esconder a existência de uma mensagem dentro de outro arquivo) e o uso de <strong>fluxos de dados alternativos (ADS)</strong> no sistema NTFS para esconder arquivos maliciosos em locais indetectáveis por ferramentas nativas.</li>
+<li><strong>Criptografia:</strong> O uso malicioso da "ciência da escrita em segredo" para tornar os dados ilegíveis para investigadores que não possuam a chave de acesso.</li>
+<li><strong>Sanitização de Discos (Wipe):</strong> Diferente da exclusão simples, esta técnica sobrescreve os dados intencionalmente para torná-los <strong>irrecuperáveis</strong> por softwares forenses.</li>
+<li><strong>Manipulação de Metadados:</strong> Alteração de carimbos de tempo (MAC Times) de arquivos para confundir a linha do tempo da investigação.</li>
+<li><strong>Ataques contra Ferramentas Forenses:</strong> Exploração de vulnerabilidades nos próprios softwares do perito, como o uso de <strong>"Zips da morte"</strong> (bombas de compressão que travam o sistema de análise) ou ataques de negação de serviço via expressões regulares (ReDoS).</li>
+</ul>
+<p>Em suma, enquanto a Computação Forense busca a verdade dos fatos através dos vestígios digitais, a Antiforense busca a <strong>obliteração desses vestígios</strong> ou o ataque à credibilidade das ferramentas e do examinador. Para o profissional da área, o conhecimento profundo das técnicas antiforense é tão importante quanto o das técnicas periciais, pois permite identificar quando uma prova foi manipulada ou escondida.</p>
+<p><strong>Referências:</strong><br />
+<a href="&lt;a href=&quot;https://drive.google.com/drive/folders/15rWgbiDRm68NiEClzbnKe5gsw6DhqyVG?usp=drive_link&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://drive.google.com/drive/folders/15rWgbiDRm68NiEClzbnKe5gsw6DhqyVG?usp=drive_link&lt;/a&gt;">Faculdade - Computação Forense</a><br />
+<a href="&lt;a href=&quot;https://drive.google.com/drive/folders/1Bp9q_emLiLK8h8sF8usX30RqJYZWsfXw?usp=drive_link&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://drive.google.com/drive/folders/1Bp9q_emLiLK8h8sF8usX30RqJYZWsfXw?usp=drive_link&lt;/a&gt;">Pos-Grad - Forense em Sistemas Linux</a></p></div></div></section>
+
+  <section class="section" id="topicos">
+    <div class="section-inner">
+      <div class="section-label animate-on-scroll"><span class="label-bar"></span><span>// conteudo</span></div>
+      <h2 class="section-title animate-on-scroll text-glitch" data-text="Tópicos da trilha">Tópicos da trilha</h2>
+      <p class="section-desc animate-on-scroll">Cada pasta do vault vira um topico. Abra para estudar — o conteúdo abre aqui
+      mesmo, com a árvore completa da trilha ao lado.</p>
+      <div class="courses-grid topics-cards">
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Criptografia.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="01 - Criptografia">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(136,110) rotate(12)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g0)"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></g>
+  </g>
+  <defs><filter id="g0" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_01</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">01 - CRIPTOGRAFIA</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl0)"/>
+  <defs><pattern id="sl0" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">9 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">01 - Criptografia</span>
+    <p class="course-desc">A criptografia é definida como a ciência da escrita em segredo, consistindo na prática de codificar e decodif…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 9 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 3 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/02%20-%20Esteganografia.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="02 - Esteganografia">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(117,110) rotate(-18)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g1)"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13 4l-2 16"/></g>
+  </g>
+  <defs><filter id="g1" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_02</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">02 - ESTEGANOGRAFIA</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl1)"/>
+  <defs><pattern id="sl1" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">4 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">02 - Esteganografia</span>
+    <p class="course-desc">A esteganografia é definida nas fontes como a arte, ciência ou prática de ocultar mensagens, imagens ou arqui…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 4 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="03 - Sistemas de Arquivos e ADS">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(123,110) rotate(9)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g2)"><rect x="3" y="4" width="18" height="7" rx="1"/><rect x="3" y="13" width="18" height="7" rx="1"/><path d="M7 7.5h.01M7 16.5h.01"/></g>
+  </g>
+  <defs><filter id="g2" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_03</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">03 - SISTEMAS DE ARQUIVOS E ADS</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl2)"/>
+  <defs><pattern id="sl2" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">5 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">03 - Sistemas de Arquivos e ADS</span>
+    <p class="course-desc">Nas fontes fornecidas, os Sistemas de Arquivos e o recurso de Alternate Data Streams (ADS) são discutidos com…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 5 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="04 - Sanitização de Discos">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(115,110) rotate(-20)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g3)"><path d="M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5zM20 19v2H6"/></g>
+  </g>
+  <defs><filter id="g3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_04</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">04 - SANITIZAÇÃO DE DISCOS</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl3)"/>
+  <defs><pattern id="sl3" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">5 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">04 - Sanitização de Discos</span>
+    <p class="course-desc">As fontes definem a sanitização de discos como o processo de exclusão de dados realizado de forma a não permi…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 5 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.1%20-%20Tipos%20de%20An%C3%A1lise/05.1%20-%20Tipos%20de%20An%C3%A1lise.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="05.1 - Tipos de Análise">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(71,110) rotate(17)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g4)"><rect x="6" y="6" width="12" height="12" rx="1"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></g>
+  </g>
+  <defs><filter id="g4" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_05</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">05.1 - TIPOS DE ANÁLISE</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl4)"/>
+  <defs><pattern id="sl4" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">1 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">05.1 - Tipos de Análise</span>
+    <p class="course-desc">Na perícia forense computacional, os estados de um computador encontrado em uma cena de crime são referidos t…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 1 anotação</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="05.2 - Procedimentos de Perícia">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(71,110) rotate(14)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g5)"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13 4l-2 16"/></g>
+  </g>
+  <defs><filter id="g5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_06</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">05.2 - PROCEDIMENTOS DE PERÍCIA</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl5)"/>
+  <defs><pattern id="sl5" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">14 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">05.2 - Procedimentos de Perícia</span>
+    <p class="course-desc">Os Procedimentos de Perícia são descritos nas fontes como o conjunto de métodos científicos e rigorosos aplic…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 14 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 3 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/06%20-%20Crimes%20Cibern%C3%A9ticos.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="06 - Crimes Cibernéticos">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(87,110) rotate(13)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g6)"><rect x="3" y="4" width="18" height="7" rx="1"/><rect x="3" y="13" width="18" height="7" rx="1"/><path d="M7 7.5h.01M7 16.5h.01"/></g>
+  </g>
+  <defs><filter id="g6" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_07</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">06 - CRIMES CIBERNÉTICOS</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl6)"/>
+  <defs><pattern id="sl6" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">9 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">06 - Crimes Cibernéticos</span>
+    <p class="course-desc">No contexto das fontes, o crime cibernético é compreendido como uma evolução das práticas ilícitas que acompa…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 9 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 2 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/07%20-%20Direito%20Digital.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="07 - Direito Digital">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(153,110) rotate(2)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g7)"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/></g>
+  </g>
+  <defs><filter id="g7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_08</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">07 - DIREITO DIGITAL</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl7)"/>
+  <defs><pattern id="sl7" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">5 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">07 - Direito Digital</span>
+    <p class="course-desc">O Direito Digital é apresentado nas fontes como um conjunto de regras e códigos de conduta que regem o compor…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 5 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/08%20-%20T%C3%A9cnicas%20Antiforenses.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="08 - Técnicas Antiforenses">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(60,110) rotate(-10)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g8)"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13 4l-2 16"/></g>
+  </g>
+  <defs><filter id="g8" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_09</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">08 - TÉCNICAS ANTIFORENSES</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl8)"/>
+  <defs><pattern id="sl8" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">5 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">08 - Técnicas Antiforenses</span>
+    <p class="course-desc">As fontes descrevem as Técnicas Antiforense como uma coleção de métodos e procedimentos aplicados com o objet…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 5 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div>
+<div class="course-card topic-card animate-on-scroll" role="button" tabindex="0" data-open="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/09%20-%20Ferramentas%20Forenses.html">
+  <div class="card-arrow"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg></div>
+  <div class="course-cover"><svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="09 - Ferramentas Forenses">
+  <rect width="640" height="360" fill="#060606"/>
+  <g stroke="rgba(0,255,65,0.06)" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="360"/><line x1="40" y1="0" x2="40" y2="360"/><line x1="80" y1="0" x2="80" y2="360"/><line x1="120" y1="0" x2="120" y2="360"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/><line x1="240" y1="0" x2="240" y2="360"/><line x1="280" y1="0" x2="280" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="360" y1="0" x2="360" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/><line x1="440" y1="0" x2="440" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/><line x1="520" y1="0" x2="520" y2="360"/><line x1="560" y1="0" x2="560" y2="360"/><line x1="600" y1="0" x2="600" y2="360"/><line x1="640" y1="0" x2="640" y2="360"/>
+    <line x1="0" y1="0" x2="640" y2="0"/><line x1="0" y1="40" x2="640" y2="40"/><line x1="0" y1="80" x2="640" y2="80"/><line x1="0" y1="120" x2="640" y2="120"/><line x1="0" y1="160" x2="640" y2="160"/><line x1="0" y1="200" x2="640" y2="200"/><line x1="0" y1="240" x2="640" y2="240"/><line x1="0" y1="280" x2="640" y2="280"/><line x1="0" y1="320" x2="640" y2="320"/><line x1="0" y1="360" x2="640" y2="360"/>
+  </g>
+  <g transform="translate(110,110) rotate(-8)" stroke="rgba(0,255,65,0.22)" fill="none" stroke-width="1">
+    <circle cx="0" cy="70" r="130"/>
+    <circle cx="0" cy="70" r="90"/>
+    <line x1="-150" y1="70" x2="150" y2="70"/>
+    <line x1="0" y1="-80" x2="0" y2="220"/>
+  </g>
+  <g transform="translate(288,104)" stroke="#00ff41" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <g transform="scale(3.2)" filter="url(#g9)"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g>
+  </g>
+  <defs><filter id="g9" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff41" flood-opacity="0.55"/>
+  </filter></defs>
+  <text x="24" y="36" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="rgba(0,255,65,0.8)">TOPICO_10</text>
+  <text x="24" y="336" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="rgba(138,138,138,0.7)">09 - FERRAMENTAS FORENSES</text>
+  <path d="M600 24 h16 v16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5"/>
+  <path d="M24 336 v-16 h-16" stroke="rgba(0,255,65,0.5)" fill="none" stroke-width="1.5" transform="translate(0,16)"/>
+  <rect width="640" height="360" fill="url(#sl9)"/>
+  <defs><pattern id="sl9" width="4" height="3" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="rgba(0,255,65,0.025)"/>
+  </pattern></defs>
+</svg><span class="cover-badge level-none">4 anotações</span></div>
+  <div class="course-body">
+    <span class="course-name">09 - Ferramentas Forenses</span>
+    <p class="course-desc">As ferramentas forenses são os instrumentos fundamentais que permitem ao perito transformar dados brutos arma…</p>
+    <div class="course-meta">
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg> 4 anotações</span>
+      <span class="cm"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg> 0 subpastas</span>
+    </div>
+  </div>
+</div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo"><span class="nav-logo-row"><span class="font-qb text-hash">#</span><span class="font-qb text-underscore">_</span><span class="neon-text font-sora text-4">4</span><span class="font-qb text-root">root</span></span></span>
+        <p>Plataforma de estudos da comunidade #_4root Academy - ciberseguranca, hacking etico e infraestrutura. Todo o conteudo e gerado automaticamente a partir do
+        vault Obsidian da comunidade.</p>
+      </div>
+      <div class="footer-socials" aria-label="Redes da comunidade"><a href="https://discord.gg/Aw4F6qXS4N" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24"><path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3.54 5.61c-3.22.96-6.22.88-8.92 0-.5-.15-.83.42-.56.86a7.54 7.54 0 0 0 5.02 2.75 7.54 7.54 0 0 0 5.02-2.75c.27-.44-.06-1.01-.56-.86Z"/><path d="M18.5 3h-13A2.5 2.5 0 0 0 3 5.5v13A2.5 2.5 0 0 0 5.5 21h13a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 18.5 3Z"/></svg></a><a href="https://www.youtube.com/@4rootcommunity" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a><a href="https://www.linkedin.com/company/4root" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://www.instagram.com/4root_community" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© <span class="js-year">2025</span> #_4root — break <span class="neon-text">//</span> learn <span class="neon-text">//</span> share</span>
+      <span class="font-mono">build 23 Oct 2026 18:48 · gerado com academy_v3.py</span>
+    </div>
+  </div>
+</footer>
+
+<template id="trilha-tree-tpl"><div class="side-nav"><a class="sn-head" href="/path/01-conceitos-08-forense-e-antiforense.html" title="Voltar para a trilha"><span class="sn-head-row"><span class="sn-label">// navegacao</span><svg class="sn-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></span><span class="sn-title">08 - Forense e Antiforense</span><span class="sn-meta font-mono">61 anotações · voltar à trilha</span></a><nav class="sn-scroll" aria-label="Arvore da trilha"><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Criptografia.html" title="Abrir anotação da pasta">01 - Criptografia</a><span class="sn-mod-n font-mono">9</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Criptografia.html"><span class="sn-num font-mono">01</span><span class="sn-t">01 - Criptografia</span></a><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Conceito/01%20-%20Conceito.html" title="Abrir anotação da pasta">01 - Conceito</a><span class="sn-mod-n font-mono">3</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Conceito/01%20-%20Ci%C3%AAncia%20da%20escrita%20secreta.html"><span class="sn-num font-mono">02</span><span class="sn-t">01 - Ciência da escrita secreta</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Conceito/01%20-%20Conceito.html"><span class="sn-num font-mono">03</span><span class="sn-t">01 - Conceito</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/01%20-%20Conceito/02%20-%20Codifica%C3%A7%C3%A3o%20de%20dados.html"><span class="sn-num font-mono">04</span><span class="sn-t">02 - Codificação de dados</span></a></div></div></div><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/02%20-%20Requisitos%20de%20Seguran%C3%A7a/02%20-%20Requisitos%20de%20Seguran%C3%A7a.html" title="Abrir anotação da pasta">02 - Requisitos de Segurança</a><span class="sn-mod-n font-mono">1</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/02%20-%20Requisitos%20de%20Seguran%C3%A7a/02%20-%20Requisitos%20de%20Seguran%C3%A7a.html"><span class="sn-num font-mono">05</span><span class="sn-t">02 - Requisitos de Segurança</span></a></div></div></div><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/03%20-%20Tipos/03%20-%20Tipos.html" title="Abrir anotação da pasta">03 - Tipos</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/03%20-%20Tipos/01%20-%20Chave%20Sim%C3%A9trica%20%28Secreta%29.html"><span class="sn-num font-mono">06</span><span class="sn-t">01 - Chave Simétrica (Secreta)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/03%20-%20Tipos/02%20-%20Chave%20Assim%C3%A9trica%20%28P%C3%BAblica%29.html"><span class="sn-num font-mono">07</span><span class="sn-t">02 - Chave Assimétrica (Pública)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/03%20-%20Tipos/03%20-%20Fun%C3%A7%C3%B5es%20Hash.html"><span class="sn-num font-mono">08</span><span class="sn-t">03 - Funções Hash</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/01%20-%20Criptografia/03%20-%20Tipos/03%20-%20Tipos.html"><span class="sn-num font-mono">09</span><span class="sn-t">03 - Tipos</span></a></div></div></div></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/02%20-%20Esteganografia.html" title="Abrir anotação da pasta">02 - Esteganografia</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/01%20-%20Oculta%C3%A7%C3%A3o%20em%20m%C3%ADdias%20%28imagem%2C%20%C3%A1udio%2C%20v%C3%ADdeo%29.html"><span class="sn-num font-mono">10</span><span class="sn-t">01 - Ocultação em mídias (imagem, áudio, vídeo)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/02%20-%20Esteganografia.html"><span class="sn-num font-mono">11</span><span class="sn-t">02 - Esteganografia</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/02%20-%20Estego-objeto%20%28capa%20%2B%20mensagem%29.html"><span class="sn-num font-mono">12</span><span class="sn-t">02 - Estego-objeto (capa + mensagem)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/02%20-%20Esteganografia/03%20-%20Marcas%20d%E2%80%99%C3%A1gua%20e%20impress%C3%B5es%20digitais.html"><span class="sn-num font-mono">13</span><span class="sn-t">03 - Marcas d’água e impressões digitais</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS.html" title="Abrir anotação da pasta">03 - Sistemas de Arquivos e ADS</a><span class="sn-mod-n font-mono">5</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/01%20-%20Alternate%20Data%20Streams%20%28ADS%20-%20NTFS%29.html"><span class="sn-num font-mono">14</span><span class="sn-t">01 - Alternate Data Streams (ADS - NTFS)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/01.1%20-%20NTFS.html"><span class="sn-num font-mono">15</span><span class="sn-t">01.1 - NTFS</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/02%20-%20Oculta%C3%A7%C3%A3o%20de%20rootkits%20e%20executaveis.html"><span class="sn-num font-mono">16</span><span class="sn-t">02 - Ocultação de rootkits e executaveis</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/03%20-%20Detec%C3%A7%C3%A3o%20via%20an%C3%A1lise%20forense.html"><span class="sn-num font-mono">17</span><span class="sn-t">03 - Detecção via análise forense</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS/03%20-%20Sistemas%20de%20Arquivos%20e%20ADS.html"><span class="sn-num font-mono">18</span><span class="sn-t">03 - Sistemas de Arquivos e ADS</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos.html" title="Abrir anotação da pasta">04 - Sanitização de Discos</a><span class="sn-mod-n font-mono">5</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/01%20-%20Limita%C3%A7%C3%A3o%20da%20exclus%C3%A3o%20comum%20%28metadados%29.html"><span class="sn-num font-mono">19</span><span class="sn-t">01 - Limitação da exclusão comum (metadados)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/02%20-%20Sobrescrita%20%28Zero-fill%20-%20padr%C3%B5es%29.html"><span class="sn-num font-mono">20</span><span class="sn-t">02 - Sobrescrita (Zero-fill - padrões)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/03%20-%20Desmagnetiza%C3%A7%C3%A3o%20e%20destrui%C3%A7%C3%A3o%20f%C3%ADsica.html"><span class="sn-num font-mono">21</span><span class="sn-t">03 - Desmagnetização e destruição física</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/04%20-%20Normas%20e%20padr%C3%B5es%20de%20elimina%C3%A7%C3%A3o%20segura.html"><span class="sn-num font-mono">22</span><span class="sn-t">04 - Normas e padrões de eliminação segura</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos/04%20-%20Sanitiza%C3%A7%C3%A3o%20de%20Discos.html"><span class="sn-num font-mono">23</span><span class="sn-t">04 - Sanitização de Discos</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.1%20-%20Tipos%20de%20An%C3%A1lise/05.1%20-%20Tipos%20de%20An%C3%A1lise.html" title="Abrir anotação da pasta">05.1 - Tipos de Análise</a><span class="sn-mod-n font-mono">1</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.1%20-%20Tipos%20de%20An%C3%A1lise/05.1%20-%20Tipos%20de%20An%C3%A1lise.html"><span class="sn-num font-mono">24</span><span class="sn-t">05.1 - Tipos de Análise</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia.html" title="Abrir anotação da pasta">05.2 - Procedimentos de Perícia</a><span class="sn-mod-n font-mono">14</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia.html"><span class="sn-num font-mono">25</span><span class="sn-t">05.2 - Procedimentos de Perícia</span></a><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/01%20-%20Fases%20B%C3%A1sicas.html" title="Abrir anotação da pasta">01 - Fases Básicas</a><span class="sn-mod-n font-mono">5</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/01%20-%20Fases%20B%C3%A1sicas.html"><span class="sn-num font-mono">26</span><span class="sn-t">01 - Fases Básicas</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/01%20-%20Identifica%C3%A7%C3%A3o%20%28f%C3%ADsica%20e%20l%C3%B3gica%29.html"><span class="sn-num font-mono">27</span><span class="sn-t">01 - Identificação (física e lógica)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/02%20-%20Preserva%C3%A7%C3%A3o%20%28imutabilidade%29.html"><span class="sn-num font-mono">28</span><span class="sn-t">02 - Preservação (imutabilidade)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/03%20-%20An%C3%A1lise%20%28processamento%20t%C3%A9cnico%29.html"><span class="sn-num font-mono">29</span><span class="sn-t">03 - Análise (processamento técnico)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/01%20-%20Fases%20B%C3%A1sicas/04%20-%20Apresenta%C3%A7%C3%A3o%20%28laudo%20pericial%29.html"><span class="sn-num font-mono">30</span><span class="sn-t">04 - Apresentação (laudo pericial)</span></a></div></div></div><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/02%20-%20Cadeia%20de%20Cust%C3%B3dia/02%20-%20Cadeia%20de%20Cust%C3%B3dia.html" title="Abrir anotação da pasta">02 - Cadeia de Custódia</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/02%20-%20Cadeia%20de%20Cust%C3%B3dia/01%20-%20Registro%20de%20manuseio.html"><span class="sn-num font-mono">31</span><span class="sn-t">01 - Registro de manuseio</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/02%20-%20Cadeia%20de%20Cust%C3%B3dia/02%20-%20Cadeia%20de%20Cust%C3%B3dia.html"><span class="sn-num font-mono">32</span><span class="sn-t">02 - Cadeia de Custódia</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/02%20-%20Cadeia%20de%20Cust%C3%B3dia/02%20-%20Garantia%20de%20idoneidade.html"><span class="sn-num font-mono">33</span><span class="sn-t">02 - Garantia de idoneidade</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/02%20-%20Cadeia%20de%20Cust%C3%B3dia/03%20-%20Formularios%20de%20Rastreabilidade.html"><span class="sn-num font-mono">34</span><span class="sn-t">03 - Formularios de Rastreabilidade</span></a></div></div></div><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/03%20-%20Coleta%20de%20Evid%C3%AAncias/03%20-%20Coleta%20de%20Evid%C3%AAncias.html" title="Abrir anotação da pasta">03 - Coleta de Evidências</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/03%20-%20Coleta%20de%20Evid%C3%AAncias/01%20-%20Ordem%20de%20volatilidade%20%28RAM%20%E2%86%92%20disco%29.html"><span class="sn-num font-mono">35</span><span class="sn-t">01 - Ordem de volatilidade (RAM → disco)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/03%20-%20Coleta%20de%20Evid%C3%AAncias/02%20-%20Bloqueadores%20de%20escrita.html"><span class="sn-num font-mono">36</span><span class="sn-t">02 - Bloqueadores de escrita</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/03%20-%20Coleta%20de%20Evid%C3%AAncias/03%20-%20Coleta%20de%20Evid%C3%AAncias.html"><span class="sn-num font-mono">37</span><span class="sn-t">03 - Coleta de Evidências</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/05.2%20-%20Procedimentos%20de%20Per%C3%ADcia/03%20-%20Coleta%20de%20Evid%C3%AAncias/03%20-%20Imagem%20forense%20bit%20a%20bit.html"><span class="sn-num font-mono">38</span><span class="sn-t">03 - Imagem forense bit a bit</span></a></div></div></div></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/06%20-%20Crimes%20Cibern%C3%A9ticos.html" title="Abrir anotação da pasta">06 - Crimes Cibernéticos</a><span class="sn-mod-n font-mono">9</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/03%20-%20Lei%20Carolina%20Dieckmann.html"><span class="sn-num font-mono">39</span><span class="sn-t">03 - Lei Carolina Dieckmann</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/06%20-%20Crimes%20Cibern%C3%A9ticos.html"><span class="sn-num font-mono">40</span><span class="sn-t">06 - Crimes Cibernéticos</span></a><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/01%20-%20Classifica%C3%A7%C3%B5es/01%20-%20Classifica%C3%A7%C3%B5es.html" title="Abrir anotação da pasta">01 - Classificações</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/01%20-%20Classifica%C3%A7%C3%B5es/01%20-%20Classifica%C3%A7%C3%B5es.html"><span class="sn-num font-mono">41</span><span class="sn-t">01 - Classificações</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/01%20-%20Classifica%C3%A7%C3%B5es/01%20-%20Puros%20%28exclusivamente%20digitais%29.html"><span class="sn-num font-mono">42</span><span class="sn-t">01 - Puros (exclusivamente digitais)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/01%20-%20Classifica%C3%A7%C3%B5es/02%20-%20Mistos%20%28impacto%20f%C3%ADsico%20%2B%20digital%29.html"><span class="sn-num font-mono">43</span><span class="sn-t">02 - Mistos (impacto físico + digital)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/01%20-%20Classifica%C3%A7%C3%B5es/03%20-%20Comuns%20%28computador%20como%20ferramenta%29.html"><span class="sn-num font-mono">44</span><span class="sn-t">03 - Comuns (computador como ferramenta)</span></a></div></div></div><div class="sn-node" data-depth="1"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/02%20-%20Atores/02%20-%20Atores.html" title="Abrir anotação da pasta">02 - Atores</a><span class="sn-mod-n font-mono">3</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/02%20-%20Atores/01%20-%20Hackers%20%28fins%20leg%C3%ADtimos%29.html"><span class="sn-num font-mono">45</span><span class="sn-t">01 - Hackers (fins legítimos)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/02%20-%20Atores/02%20-%20Atores.html"><span class="sn-num font-mono">46</span><span class="sn-t">02 - Atores</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/06%20-%20Crimes%20Cibern%C3%A9ticos/02%20-%20Atores/02%20-%20Crackers%20%28atividade%20criminosa%29.html"><span class="sn-num font-mono">47</span><span class="sn-t">02 - Crackers (atividade criminosa)</span></a></div></div></div></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/07%20-%20Direito%20Digital.html" title="Abrir anotação da pasta">07 - Direito Digital</a><span class="sn-mod-n font-mono">5</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/01%20-%20Marco%20Civil%20da%20Internet.html"><span class="sn-num font-mono">48</span><span class="sn-t">01 - Marco Civil da Internet</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/02%20-%20LGPD.html"><span class="sn-num font-mono">49</span><span class="sn-t">02 - LGPD</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/03%20-%20Conven%C3%A7%C3%A3o%20de%20Budapeste.html"><span class="sn-num font-mono">50</span><span class="sn-t">03 - Convenção de Budapeste</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/04%20-%20Princ%C3%ADpios%20-%20Cibercrime%20e%20IoT.html"><span class="sn-num font-mono">51</span><span class="sn-t">04 - Princípios - Cibercrime e IoT</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/07%20-%20Direito%20Digital/07%20-%20Direito%20Digital.html"><span class="sn-num font-mono">52</span><span class="sn-t">07 - Direito Digital</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/08%20-%20T%C3%A9cnicas%20Antiforenses.html" title="Abrir anotação da pasta">08 - Técnicas Antiforenses</a><span class="sn-mod-n font-mono">5</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/01%20-%20Limpeza%20de%20artefatos%20%28wipe-eraser%29.html"><span class="sn-num font-mono">53</span><span class="sn-t">01 - Limpeza de artefatos (wipe-eraser)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/02%20-%20Modifica%C3%A7%C3%A3o%20de%20Metadados%20%28MAC%20Times%29.html"><span class="sn-num font-mono">54</span><span class="sn-t">02 - Modificação de Metadados (MAC Times)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/03%20-%20Ambientes%20vol%C3%A1teis%20%28execu%C3%A7%C3%A3o%20em%20RAM%29.html"><span class="sn-num font-mono">55</span><span class="sn-t">03 - Ambientes voláteis (execução em RAM)</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/04%20-%20Criptografia%20e%20volumes%20ocultos.html"><span class="sn-num font-mono">56</span><span class="sn-t">04 - Criptografia e volumes ocultos</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/08%20-%20T%C3%A9cnicas%20Antiforenses/08%20-%20T%C3%A9cnicas%20Antiforenses.html"><span class="sn-num font-mono">57</span><span class="sn-t">08 - Técnicas Antiforenses</span></a></div></div></div><div class="sn-node" data-depth="0"><div class="sn-mod"><button class="sn-tw" type="button" aria-label="Expandir ou recolher"><svg class="sn-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button><a class="sn-mod-t" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/09%20-%20Ferramentas%20Forenses.html" title="Abrir anotação da pasta">09 - Ferramentas Forenses</a><span class="sn-mod-n font-mono">4</span></div><div class="sn-kids"><div class="sn-kids-in"><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/01%20-%20Comerciais%20-%20EnCase%2C%20FTK.html"><span class="sn-num font-mono">58</span><span class="sn-t">01 - Comerciais - EnCase, FTK</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/02%20-%20Livres%20-%20Autopsy%2C%20Sleuth%20Kit%20%28TSK%29%2C%20Volatility.html"><span class="sn-num font-mono">59</span><span class="sn-t">02 - Livres - Autopsy, Sleuth Kit (TSK), Volatility</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/03%20-%20Coleta%20-%20LiME%2C%20dd%2C%20dcfldd.html"><span class="sn-num font-mono">60</span><span class="sn-t">03 - Coleta - LiME, dd, dcfldd</span></a><a class="sn-link" href="/01%20-%20Conceitos/08%20-%20Forense%20e%20Antiforense/09%20-%20Ferramentas%20Forenses/09%20-%20Ferramentas%20Forenses.html"><span class="sn-num font-mono">61</span><span class="sn-t">09 - Ferramentas Forenses</span></a></div></div></div></nav></div></template>
+
+<div class="note-modal" id="note-modal" aria-hidden="true">
+  <div class="nm-backdrop" data-nm-close></div>
+  <div class="nm-window" role="dialog" aria-modal="true" aria-label="Conteudo da anotação">
+    <div class="nm-head">
+      <button class="nm-side-toggle" type="button" aria-label="Ocultar ou mostrar a arvore da trilha" aria-pressed="false" data-nm-side title="Ocultar/mostrar arvore da trilha">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M9.5 4v16"/></svg>
+      </button>
+      <span class="nm-crumb"><span class="nm-label">// trilha</span><span class="nm-name">08 - Forense e Antiforense</span></span>
+      <button class="nm-close" type="button" aria-label="Fechar e voltar para a trilha" data-nm-close>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="nm-body">
+      <aside class="nm-side" id="nm-side">
+        <div class="nm-side-inner"></div>
+        <div class="sn-resizer" aria-hidden="true" title="Arraste para redimensionar"></div>
+      </aside>
+      <div class="nm-content" id="nm-content">
+        <div class="nm-article" data-note=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Busca">
+  <div class="search-modal">
+    <div class="search-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg><input type="text" id="search-input" placeholder="Buscar em todo o vault... (titulo, conteudo e tags)" autocomplete="off" spellcheck="false"><button class="search-close" type="button" aria-label="Fechar"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="search-body" id="search-body"></div>
+    <div class="sr-count" id="search-count"></div>
+    <div class="search-kbd-hint">Use <kbd>CTRL</kbd>+<kbd>K</kbd> como atalho rapido</div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox"><img src="" alt="Imagem ampliada"></div>
+
+<script src="/assets/js/app.js?v=20261023184833"></script>
+</body>
+</html>
